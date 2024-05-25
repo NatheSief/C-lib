@@ -29,21 +29,21 @@ char	*ft_itoa(int n)
 {
 	size_t		i;
 	size_t		modulus;
-	short int	maiboyerlpb;
+	short int	rparodilpb;
 	char		str[13];
 	long		nb;
 
 	nb = n;
-	maiboyerlpb = 0;
+	rparodilpb = 0;
 	modulus = 1000000000;
 	ft_bzero(str, 13);
 	i = ft_check_sign(str, &nb);
 	while (modulus != 0)
 	{
-		if (nb / modulus != 0 || maiboyerlpb != 0)
+		if (nb / modulus != 0 || rparodilpb != 0)
 		{
 			str[i++] = (nb / modulus) + 48;
-			maiboyerlpb++;
+			rparodilpb++;
 		}
 		nb %= modulus;
 		modulus /= 10;

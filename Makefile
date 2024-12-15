@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+         #
+#    By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 20:58:55 by nsiefert          #+#    #+#              #
-#    Updated: 2024/05/04 15:04:58 by nsiefert         ###   ########.fr        #
+#    Updated: 2024/12/15 12:19:21 by ncrombez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,25 +82,19 @@ LIBFTSRCB =	ft_lstnew.c 			\
 			ft_lstiter.c 			\
 			ft_lstmap.c
 
-PRINTFSRC = ft_print_hex.c			\
-			ft_print_ptr.c			\
-			ft_print_hex.c			\
-			ft_printf_utils.c		\
-			ft_print_unsigned.c		\
-			ft_printf.c				\
+PRINTFSRC = ft_fd_print_hex.c			\
+			ft_fd_print_ptr.c			\
+			ft_fd_print_hex.c			\
+			ft_fd_printf_utils.c		\
+			ft_fd_print_unsigned.c		\
+			ft_fd_printf.c				\
+			ft_printf.c					\
 
 GNLSRC	  = get_next_line.c			\
 			get_next_line_utils.c	\
 
 PERSOSRC  =	ft_countchar.c			\
 			ft_tabsize.c			\
-
-PRINTF_FDSRC = ft_fd_print_hex.c			\
-			ft_fd_print_ptr.c				\
-			ft_fd_print_hex.c				\
-			ft_fd_printf_utils.c			\
-			ft_fd_print_unsigned.c			\
-			ft_printf_fd.c					\
 
 # LIBFT
 SRC_LIBFT	= 	$(addprefix $(LIBFT), $(LIBFTSRC))
@@ -111,9 +105,6 @@ OBJ_LIBFTB	= 	$(addprefix $(OBJ_DIR), $(LIBFTSRCB:.c=.o))
 # PRINTF
 SRC_PRINTF	=	$(addprefix $(PRINTF), $(PRINTFSRC))
 OBJ_PRINTF	= 	$(addprefix $(OBJ_DIR), $(PRINTFSRC:.c=.o))
-# PRINTFFD
-SRC_PRINTF_FD	=	$(addprefix $(PRINTF_FD), $(PRINTF_FDSRC))
-OBJ_PRINTF_FD	= 	$(addprefix $(OBJ_DIR), $(PRINTF_FDSRC:.c=.o))
 # GET_NEXT_LINE
 SRC_GNL		=	$(addprefix $(GNL), $(GNLSRC))
 OBJ_GNL		= 	$(addprefix $(OBJ_DIR), $(GNLSRC:.c=.o))

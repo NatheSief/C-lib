@@ -3,42 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:17:53 by nsiefert          #+#    #+#             */
-/*   Updated: 2023/12/01 16:50:48 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/15 12:18:29 by ncrombez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
-
-int	ft_printchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
-
-int	ft_formats(va_list args, const char format)
-{
-	int	print_length;
-
-	print_length = 0;
-	if (format == 'c')
-		print_length += ft_printchar(va_arg(args, int));
-	else if (format == 's')
-		print_length += ft_printstr(va_arg(args, char *));
-	else if (format == 'p')
-		print_length += ft_print_ptr(va_arg(args, unsigned long long));
-	else if (format == 'd' || format == 'i')
-		print_length += ft_printnbr(va_arg(args, int));
-	else if (format == 'u')
-		print_length += ft_print_unsigned(va_arg(args, unsigned int));
-	else if (format == 'x' || format == 'X')
-		print_length += ft_print_hex(va_arg(args, unsigned int), format);
-	else if (format == '%')
-		print_length += ft_printpercent();
-	return (print_length);
-}
+#include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
 {
@@ -53,11 +25,11 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			print_length += ft_formats(args, str[i + 1]);
+			print_length += ft_fd_formats(1, str[i + 1], args);
 			i++;
 		}
 		else
-			print_length += ft_printchar(str[i]);
+			print_length += ft_fd_printchar(str[i], 1);
 		i++;
 	}
 	va_end(args);

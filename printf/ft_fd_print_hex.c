@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex.c                                     :+:      :+:    :+:   */
+/*   ft_fd_print_hex.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:18:23 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/05/04 12:22:32 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/15 11:54:13 by ncrombez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_hex_len(unsigned	int num)
 {
@@ -35,13 +35,13 @@ void	ft_put_hex(int fd, unsigned int num, const char format)
 	else
 	{
 		if (num <= 9)
-			ft_fd_printchar(fd,(num + '0'), 1);
+			ft_fd_printchar((num + '0'), fd);
 		else
 		{
 			if (format == 'x')
-				ft_fd_printchar(fd,(num - 10 + 'a'), 1);
+				ft_fd_printchar((num - 10 + 'a'), fd);
 			if (format == 'X')
-				ft_fd_printchar(fd,(num - 10 + 'A'), 1);
+				ft_fd_printchar((num - 10 + 'A'), fd);
 		}
 	}
 }

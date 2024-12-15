@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   ft_fd_print_ptr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:17:19 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/05/04 12:20:52 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/15 11:55:27 by ncrombez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_ptr_len(uintptr_t num)
 {
@@ -25,19 +25,19 @@ int	ft_ptr_len(uintptr_t num)
 	return (len);
 }
 
-void	ft_put_ptr(uintptr_t num)
+void	ft_put_ptr(int fd, uintptr_t num)
 {
 	if (num >= 16)
 	{
-		ft_put_ptr(num / 16);
-		ft_put_ptr(num % 16);
+		ft_put_ptr(fd, num / 16);
+		ft_put_ptr(fd, num % 16);
 	}
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_putchar_fd((num + '0'), fd);
 		else
-			ft_putchar_fd((num - 10 + 'a'), 1);
+			ft_putchar_fd((num - 10 + 'a'), fd);
 	}
 }
 
@@ -52,7 +52,7 @@ int	ft_fd_print_ptr(int fd, unsigned long long ptr)
 		return (print_length);
 	}
 	print_length += write(fd, "0x", 2);
-	ft_put_ptr(ptr);
+	ft_put_ptr(fd, ptr);
 	print_length += ft_ptr_len(ptr);
 	return (print_length);
 }

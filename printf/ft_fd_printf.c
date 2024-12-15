@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_fd_printf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:17:53 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/05/04 12:24:07 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/15 12:16:34 by ncrombez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf_fd.h"
+#include "ft_printf.h"
 
 int	ft_fd_printchar(int c, int fd)
 {
@@ -18,7 +18,7 @@ int	ft_fd_printchar(int c, int fd)
 	return (1);
 }
 
-static int	ft_fd_formats(int fd, va_list args, const char format)
+int	ft_fd_formats(int fd, const char format, va_list args)
 {
 	int	print_length;
 
@@ -36,7 +36,7 @@ static int	ft_fd_formats(int fd, va_list args, const char format)
 	else if (format == 'x' || format == 'X')
 		print_length += ft_fd_print_hex(fd, va_arg(args, unsigned int), format);
 	else if (format == '%')
-		print_length += ft_fd_printpercent();
+		print_length += ft_fd_printchar('%', fd);
 	return (print_length);
 }
 
@@ -53,11 +53,11 @@ int	ft_printf_fd(int fd, const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			print_length += ft_fd_formats(fd, args, str[i + 1]);
+			print_length += ft_fd_formats(fd, str[i + 1], args);
 			i++;
 		}
 		else
-			print_length += ft_fd_printchar(fd, str[i]);
+			print_length += ft_fd_printchar(str[i], fd);
 		i++;
 	}
 	va_end(args);

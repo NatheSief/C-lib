@@ -6,7 +6,7 @@
 #    By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 20:58:55 by nsiefert          #+#    #+#              #
-#    Updated: 2024/12/15 12:19:21 by ncrombez         ###   ########.fr        #
+#    Updated: 2024/12/15 12:54:32 by ncrombez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,26 +118,16 @@ all: print_lib $(NAME)
 
 print_lib :
 	@echo "$(MAGENTA)     /\__\      ___        /\  \         /\  \         /\  \     	$(RED)A	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)    /:/  /     /\  \      /::\  \       /::\  \        \:\  \    	$(RED)M	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)   /:/  /      \:\  \    /:/\:\  \     /:/\:\  \        \:\  \   	$(RED)E	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)  /:/  /       /::\__\  /::\_\:\__\   /::\_\:\  \       /::\  \  	$(RED)L	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA) /:/__/     __/:/\/__/ /:/\:\ \:|__| /:/\:\ \:\__\     /:/\:\__\ 	$(RED)I	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA) \:\  \    /\/:/  /    \:\_\:\/:/  / \/__\:\ \/__/    /:/  \/__/ 	$(RED)O	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)  \:\  \   \::/__/      \:\ \::/  /       \:\__\     /:/  /      	$(RED)R	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)   \:\  \   \:\__\       \:\/:/  /         \/__/     \/__/       	$(RED)E	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)    \:\__\   \/__/        \::/__/                                	$(RED)E	$(DEF_COLOR)"
-	@sleep 0.1
 	@echo "$(MAGENTA)     \/__/                 _                            		  		$(DEF_COLOR)"
-	@sleep 0.1
-
+	
 $(NAME): $(OBJ_LIBFT) $(OBJ_LIBFTB) $(OBJ_PRINTF) $(OBJ_GNL) $(OBJ_PERSO) $(OBJ_PRINTF_FD)
 	@ar rc $(NAME) $(OBJ_LIBFT) $(OBJ_LIBFTB) $(OBJ_PRINTF) $(OBJ_GNL) $(OBJ_PERSO) $(OBJ_PRINTF_FD)
 	@ranlib $(NAME)

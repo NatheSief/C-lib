@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   perso.h                                            :+:      :+:    :+:   */
+/*   ft_free_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 08:02:38 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/15 14:55:39 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/15 14:54:24 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/15 14:55:19 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PERSO_H
-# define PERSO_H
+#include "perso.h"
 
-# include "libft.h"
+//  Free a 2 dimensions tab of pointers
+void    free_tab(void   **tab)
+{
+    int i;
 
-int	ft_countchar(char *str, char c);
-int ft_tabsize(char **tab);
-void    free_tab(void   **tab);
-
-#endif 
+    i = -1;
+    while (tab[++i])
+        free(tab[i]);
+    free(tab);
+}

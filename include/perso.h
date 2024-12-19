@@ -6,7 +6,7 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 08:02:38 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/15 14:55:39 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/19 09:54:29 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include "libft.h"
 
-int	ft_countchar(char *str, char c);
-int ft_tabsize(char **tab);
+int	    ft_countchar(char *str, char c);
+int     ft_tabsize(char **tab);
 void    free_tab(void   **tab);
-
+void    print_tab(char **tab);
+int     is_whitespace(char c);
 #endif 

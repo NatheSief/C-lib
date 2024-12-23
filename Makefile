@@ -6,7 +6,7 @@
 #    By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 20:58:55 by nsiefert          #+#    #+#              #
-#    Updated: 2024/12/15 14:56:17 by nsiefert         ###   ########.fr        #
+#    Updated: 2024/12/19 09:55:52 by nsiefert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,8 @@ GNLSRC	  = get_next_line.c				\
 PERSOSRC  =	ft_countchar.c				\
 			ft_tabsize.c				\
 			ft_free_tab.c				\
+			ft_iswhitespace.c			\
+			print_tab.c					\
 
 # LIBFT
 SRC_LIBFT	= 	$(addprefix $(LIBFT), $(LIBFTSRC))

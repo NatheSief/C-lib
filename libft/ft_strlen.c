@@ -6,7 +6,7 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 17:39:48 by nsiefert          #+#    #+#             */
-/*   Updated: 2023/12/19 20:39:34 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/19 12:17:20 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,14 @@ size_t	ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
+}
+
+size_t	ft_strnlen(const char *s, size_t n)
+{
+	size_t len;
+
+	len = 0;
+	while (s[len] != '\0' && len < n)
+		len++;
+	return (len);
 }

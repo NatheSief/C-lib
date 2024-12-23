@@ -6,7 +6,7 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 17:40:33 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/19 12:17:17 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/23 18:21:46 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@
 # include "get_next_line.h"
 # include "ft_printf.h"
 # include "perso.h"
-
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
 
 typedef struct s_list
 {
@@ -75,6 +72,7 @@ char	**ft_split(char const *s, char c);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strnlen(const char *s, size_t n);
+size_t	ft_strlen_tab(char **tab);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 t_list	*ft_lstnew(void *content);

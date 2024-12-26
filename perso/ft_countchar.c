@@ -6,11 +6,11 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 08:00:43 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/01/23 12:50:37 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/perso.h"
+#include "perso.h"
 
 int	ft_countchar(char *str, char c)
 {

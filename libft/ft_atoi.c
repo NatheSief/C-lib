@@ -6,11 +6,11 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 17:35:06 by nsiefert          #+#    #+#             */
-/*   Updated: 2023/12/19 20:33:44 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/26 17:26:30 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static int	ft_check_space(int c)
 {

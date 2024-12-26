@@ -6,11 +6,11 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 18:41:09 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/01/27 11:19:14 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#include "get_next_line.h"
 
 static char	*ft_next(char **temp)
 {

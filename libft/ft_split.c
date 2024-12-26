@@ -6,34 +6,9 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 17:38:42 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/19 09:19:24 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/25 21:03:08 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../include/libft.h"
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: apuchill <apuchill@student.42sp.org.br>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/01 23:49:55 by apuchill          #+#    #+#             */
-/*   Updated: 2021/02/15 15:47:04 by apuchill         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/*
-** LIBRARY: N/A
-** SYNOPSIS: split string, with specified character as delimiter, into an array
-**			of strings
-**
-** DESCRIPTION:
-** 		Allocates (with malloc(3)) and returns an array of strings obtained by
-**	splitting ’s’ using the character ’c’ as a delimiter. The array must be
-**	ended by a NULL pointer.
-*/
 
 #include "libft.h"
 

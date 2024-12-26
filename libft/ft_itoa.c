@@ -6,11 +6,11 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 17:35:56 by nsiefert          #+#    #+#             */
-/*   Updated: 2023/12/19 20:35:06 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 static size_t	ft_check_sign(char *str, long *nb)
 {

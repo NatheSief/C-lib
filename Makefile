@@ -6,7 +6,7 @@
 #    By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 20:58:55 by nsiefert          #+#    #+#              #
-#    Updated: 2024/12/24 15:22:09 by nsiefert         ###   ########.fr        #
+#    Updated: 2024/12/26 17:24:59 by nsiefert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC			=	@cc
 CFLAGS		=	-Wall -Wextra -Werror -g3
 
 #Folders
-INCLUDE		=	include/
+INCLUDE		=	includes/
 LIBFT 		=	libft/
 PRINTF 		=	printf/
 GNL 		=	gnl/
@@ -81,7 +81,8 @@ LIBFTSRCB =	ft_lstnew.c 				\
 			ft_lstdelone.c 				\
 			ft_lstclear.c 				\
 			ft_lstiter.c 				\
-			ft_lstmap.c
+			ft_lstmap.c					\
+			ft_lstto_tab.c
 
 PRINTFSRC = ft_fd_print_hex.c			\
 			ft_fd_print_ptr.c			\

@@ -6,7 +6,7 @@
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 14:54:24 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/15 14:55:19 by nsiefert         ###   ########.fr       */
+/*   Updated: 2024/12/25 21:16:26 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 //  Free a 2 dimensions tab of pointers
 void    free_tab(void   **tab)
 {
-    int i;
+	int		i;
 
-    i = -1;
-    while (tab[++i])
-        free(tab[i]);
-    free(tab);
+	i = 0;
+	while (tab[i] != NULL)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }

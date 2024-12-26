@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tabsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nate <nate@student.42.fr>                  #+#  +:+       +#+        */
+/*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-04-08 08:53:52 by nate              #+#    #+#             */
-/*   Updated: 2024-04-08 08:53:52 by nate             ###   ########.fr       */
+/*   Created: 2024/04/08 08:53:52 by nate              #+#    #+#             */
+/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/perso.h"
+#include "perso.h"
 
 int	ft_tabsize(char **tab)
 {

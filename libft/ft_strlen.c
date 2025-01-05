@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 17:39:48 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/26 19:09:53 by nsiefert          #+#    #+#             */
+/*   Updated: 2025/01/03 18:51:55 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if (!s)
+	if (!s || !*s)
 		return (0);
 	while (s[i] != '\0')
 		i++;
@@ -26,7 +26,7 @@ size_t	ft_strlen(const char *s)
 
 size_t	ft_strnlen(const char *s, size_t n)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] != '\0' && len < n)
@@ -40,7 +40,7 @@ size_t	ft_strlen_tab(char **tab)
 
 	i = -1;
 	while (tab[++i])
-		continue;
+		continue ;
 	return (i);
 }
 

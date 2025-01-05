@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncrombez <ncrombez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 12:00:00 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/15 12:07:13 by ncrombez         ###   ########.fr       */
+/*   Created: 2024/12/26 19:06:15 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/27 12:21:03 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <unistd.h>
 # include <stdint.h>
 
-int 	ft_printf(const char *str, ...);
-int 	ft_printf_fd(int fd, const char *str, ...);
+int		ft_printf(const char *str, ...);
+int		ft_printf_fd(int fd, const char *str, ...);
 int		ft_fd_formats(int fd, const char format, va_list args);
 int		ft_fd_printchar(int c, int fd);
 int		ft_fd_printstr(int fd, char *str);

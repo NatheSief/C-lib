@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 18:43:03 by nsiefert          #+#    #+#             */
-/*   Updated: 2023/12/19 20:27:15 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/26 19:06:20 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/26 19:06:21 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@
 char	*ft_strchr(char const *s, int c);
 size_t	ft_strlen(char const *str);
 char	*ft_strdup(char const *s1);
-char	*ft_strjoin_free_s1(char *s1, char const *s2);
+char	*ft_strjoin_free_s1(char *s1, char *s2);
 char	*ft_substr(char const *str, unsigned int start, size_t size);
 
 /*

@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 18:19:20 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/19 09:54:36 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/26 19:11:23 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/27 12:27:17 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "perso.h"
 
-int is_whitespace(char c)
+int	is_whitespace(char c)
 {
-    return ((c >= 8 && c <= 13) || c == 32);
+	return ((c >= 8 && c <= 13) || c == 32);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 18:41:09 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/26 19:05:49 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/26 19:05:52 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,36 +95,36 @@ char	*get_next_line(int fd)
 }
 
 // #include <stdio.h>
-// int    main(int ac, char **av)
+// int	main(int ac, char **av)
 // {
-//     int        fd;
-//     int        fd2;
-//     int        fd3;
-//     char    *str;
-//     char    *str2;
-//     char    *str3;
+//	 int		fd;
+//	 int		fd2;
+//	 int		fd3;
+//	 char	*str;
+//	 char	*str2;
+//	 char	*str3;
 
-//     fd = open(av[1], O_RDONLY);
+//	 fd = open(av[1], O_RDONLY);
 // 	printf ("fd du premier fichier : %d\n", fd);
-//     fd2 = open(av[2], O_RDONLY);
+//	 fd2 = open(av[2], O_RDONLY);
 // 	printf ("fd du deuxieme fichier : %d\n", fd2);
-//     fd3 = open(av[3], O_RDONLY);
+//	 fd3 = open(av[3], O_RDONLY);
 // 	printf ("fd du troisieme fichier : %d\n", fd3);
-//     (void) ac;
-//     str = get_next_line(fd);
-//     str2 = get_next_line(fd2);
-//     str3 = get_next_line(fd3);
-//     while (str && str2 && str3)
-//     {
-//         printf("%s", str);
-//         printf("%s", str2);
-//         printf("%s", str3);
-//         free(str);
-//         free(str2);
-//         free(str3);
-//         str = get_next_line(fd);
-//         str2 = get_next_line(fd2);
-//         str3 = get_next_line(fd3);
-//     }
-//     return (0);
+//	 (void) ac;
+//	 str = get_next_line(fd);
+//	 str2 = get_next_line(fd2);
+//	 str3 = get_next_line(fd3);
+//	 while (str && str2 && str3)
+//	 {
+//		 printf("%s", str);
+//		 printf("%s", str2);
+//		 printf("%s", str3);
+//		 free(str);
+//		 free(str2);
+//		 free(str3);
+//		 str = get_next_line(fd);
+//		 str2 = get_next_line(fd2);
+//		 str3 = get_next_line(fd3);
+//	 }
+//	 return (0);
 // }

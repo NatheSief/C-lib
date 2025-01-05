@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 17:40:33 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/26 17:24:16 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/26 19:06:27 by nsiefert          #+#    #+#             */
+/*   Updated: 2025/01/05 16:09:21 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
 # include "perso.h"
+# include "colors.h"
+# include "tokenizer.h"
 
 typedef struct s_list
 {

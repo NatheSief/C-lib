@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabsize.c                                       :+:      :+:    :+:   */
+/*   garbage.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 08:53:52 by nate              #+#    #+#             */
-/*   Updated: 2024/12/26 17:26:29 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/30 12:35:34 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/30 12:54:55 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "perso.h"
+#ifndef GARBAGE_H
+# define GARBAGE_H
 
-int	ft_tabsize(char **tab)
+# include "libft.h"
+
+typedef struct s_garbage
 {
-    int i;
+	void *ptr;
+	struct s_garbage *next;
+} t_garbage;
 
-    i = 0;
-    while (tab[i])
-        i++;
-    return (i);
-}
+typedef struct s_gc
+{
+	t_garbage *head;
+} t_gc;
+
+void	gc_free_block(t_gc *gc, void *ptr);
+void	*gc_malloc(t_gc *gc, size_t size);
+void	gc_add(t_gc *gc, void *ptr);
+t_gc	*gc_init(void);
+void	gc_cleanup(t_gc *gc);
+
+#endif

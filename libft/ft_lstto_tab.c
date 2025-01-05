@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsiefert <nsiefert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:32:38 by nsiefert          #+#    #+#             */
-/*   Updated: 2024/12/26 17:23:59 by nsiefert         ###   ########.fr       */
+/*   Created: 2024/12/26 19:08:27 by nsiefert          #+#    #+#             */
+/*   Updated: 2024/12/27 16:35:50 by nsiefert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	**ft_lstto_tab(t_list **head)
 	if (!tmp)
 		return (NULL);
 	size = ft_lstlen(head);
-	tab = malloc(sizeof(char *) * size);
+	tab = malloc(sizeof(char *) * (size + 1));
 	if (!tab)
 		return (NULL);
 	i = -1;
